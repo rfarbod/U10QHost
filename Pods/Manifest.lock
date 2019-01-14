@@ -1,0 +1,56 @@
+PODS:
+  - Alamofire (4.8.0)
+  - Arrow (4.2.0)
+  - Kingfisher (5.0.1)
+  - lottie-ios (2.5.2)
+  - ReachabilitySwift (4.3.0)
+  - Socket.IO-Client-Swift (13.3.1):
+    - Starscream (~> 3.0.2)
+  - Spring (1.0.6)
+  - Starscream (3.0.6)
+  - SwiftyJSON (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Arrow
+  - Kingfisher
+  - lottie-ios
+  - ReachabilitySwift
+  - Socket.IO-Client-Swift (~> 13.3.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Arrow
+    - Kingfisher
+    - lottie-ios
+    - ReachabilitySwift
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: fafd0b2e8d4d46405bd86fa7ba84bb7f73a20b13
+    :git: https://github.com/MengTo/Spring.git
+
+SPEC CHECKSUMS:
+  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
+  Arrow: 7a8fd8f47b3f584ddeac1b783f1f230d183d21a7
+  Kingfisher: 4f771421b9208185217550528a06fd48756cb7c2
+  lottie-ios: 3fef45d3fabe63e3c7c2eb603dd64ddfffc73062
+  ReachabilitySwift: 408477d1b6ed9779dba301953171e017c31241f3
+  Socket.IO-Client-Swift: 79f8f85fa44881838175a20f9bd2c32bef2c9d37
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+
+PODFILE CHECKSUM: ca3383099cc7df28436d94026c71d7ed1a31c5cb
+
+COCOAPODS: 1.5.3

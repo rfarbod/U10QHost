@@ -1,0 +1,33 @@
+//
+//  SessionStart.swift
+//  U10QHost
+//
+//  Created by Farbod on 1/13/19.
+//  Copyright © 2019 Farbod. All rights reserved.
+//
+
+import Foundation
+import  Alamofire
+func getQuestionId(completion:@escaping ((String)->())) {
+    let headers :[String:String] = [
+        "t":"\(Constants.token)"
+    ]
+    let params:[String:Any] = [
+        "pl":2,
+        "bl":1,
+        "di":"testing",
+        "dn":"iPad",
+        "os":"11.2.5"
+    ]
+   let url = MyURLs.sessionStart
+    Alamofire.request(url, method: .post, parameters: params , encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
+        let responseJSON = response.result.value as? [String:Any]
+        if let responseJSONUW = responseJSON {
+            let result = responseJSONUW["result"] as? [String:Any]
+            if let resultUW = result {
+                let nextQuiz = resultUW["nextQuiz"] as? [String:Any]
+                completion(nextQuiz!["_id"] as! String)
+            }
+        }
+    }
+}

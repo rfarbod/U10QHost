@@ -1,0 +1,6 @@
+framework module Pods_U10QHost {
+  umbrella header "Pods-U10QHost-umbrella.h"
+
+  export *
+  module * { export * }
+}
