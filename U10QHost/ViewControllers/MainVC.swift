@@ -10,7 +10,14 @@ import UIKit
 import Lottie
 import Spring
 import Kingfisher
+var mainVC:MainVC? = nil
 class MainVC: UIViewController {
+    @IBOutlet weak var btnShowAnswer: DesignableButton!
+    @IBOutlet weak var btnAskQuestion: DesignableButton!
+    @IBOutlet weak var btnShowWinners: DesignableButton!
+    @IBOutlet weak var btnEndQuiz: DesignableButton!
+    @IBOutlet weak var lblLifeUsage: UILabel!
+    @IBOutlet weak var btnDes: DesignableButton!
     @IBOutlet weak var lblQuestionStatus: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblUserNumber: UILabel!
@@ -26,23 +33,44 @@ class MainVC: UIViewController {
     var chats:[String] = []
     var usernames:[JUserComment] = []
     var questions:[QuestionModel] = []
+    var descriptionTxt:[Question] = []
     var currentQuestion:Int = 0
     var correctAnswer:Int = 0
     var quizId = String()
+    var currentTime = Int()
+    var timer       = Timer()
     lazy var logic = MainLC(self)
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainVC = self
         setupAnimation()
         EventsHelper.observeUserNumber(self, with: #selector(userNumber))
         EventsHelper.observeCreate(self, with: #selector(create))
         EventsHelper.observeAskQuestion(self, with: #selector(questionShowed))
         EventsHelper.observeTrueAnswerCount(self, with: #selector(answerShowed))
         logic.requestQuestions()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        descriptionTxt = logic.getDes(quizId: self.quizId)
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+    @IBAction func pressedAskQuestion(_ sender: UIButton) {
+        logic.askAQuestion(quizId: self.quizId, questionIndex: currentQuestion)
+        btnAskQuestion.isEnabled = false
+        btnNext.isEnabled = false
+        btnPrev.isEnabled = false
+        
+    }
+    @IBAction func pressedEndQuiz(_ sender: UIButton) {
+        logic.endAQuiz(quizId: self.quizId)
+    }
+    @IBAction func pressedShowWinners(_ sender: UIButton) {
+        logic.showAWinners(quizId: self.quizId)
+        self.performSegue(withIdentifier: "showWinners", sender: self)
+    }
     @IBAction func nextQuestion(_ sender: DesignableButton) {
         currentQuestion = currentQuestion + 1
         if currentQuestion < questions.count  {
@@ -50,8 +78,17 @@ class MainVC: UIViewController {
         }
     }
     @IBAction func showCorrectAnswer(_ sender: DesignableButton) {
+        btnShowAnswer.isEnabled = false
+        logic.showAnAnswer(quizId: quizId, questionIndex: currentQuestion)
         logic.requestAnswer(questionId: quizId, questionIndex: currentQuestion) { (correctAnswer) in
             self.setupAnswer(correctAnswer: correctAnswer)
+        }
+        if currentQuestion > questions.count - 2 {
+            btnEndQuiz.isHidden = false
+            btnShowWinners.isHidden = false
+        }else{
+            btnShowWinners.isHidden = true
+            btnEndQuiz.isHidden = true
         }
     }
     @IBAction func prevQuestion(_ sender: DesignableButton) {
@@ -60,8 +97,12 @@ class MainVC: UIViewController {
             setupViews(currentQuestion: currentQuestion)
         }
     }
+    @IBAction func pressedViewDes(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "viewDes", sender: self)
+    }
     @objc func questionShowed(notification: Notification) {
         lblQuestionStatus.text = "سوال نمایش داده شد"
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
     }
     @objc func answerShowed(notification:Notification) {
         lblQuestionStatus.text = "جواب نمایش داده شد"
@@ -80,12 +121,29 @@ class MainVC: UIViewController {
         let numberOfUsers = notification.userInfo!["number"] as! Int
         lblUserNumber.text = "تعداد شرکت کنندگان:\(numberOfUsers.persianDigits)"
     }
+    @objc func updateTime() {
+        questionTitle.text = questions[currentQuestion].text
+        if currentTime < 10 {
+           currentTime = currentTime + 1
+           questionTitle.text = "\(questionTitle.text!) (\(currentTime))"
+        }else {
+            questionTitle.text = "وقت تمام شد"
+            questionTitle.textAlignment = .center
+            questionTitle.textColor = UIColor.red
+            currentTime = 0
+            timer.invalidate()
+            btnNext.isEnabled = true
+            btnPrev.isEnabled = true
+        }
+    }
     func questionsRecived(questions:[QuestionModel]) {
         self.questions = questions
         currentQuestion = 0
         setupViews(currentQuestion: currentQuestion)
     }
     func setupAnswer(correctAnswer:GetAnswerModel) {
+        
+        lblQuestionStatus.text = ""
         switch correctAnswer.correct! {
         case 1:
             viewAnswer1.backgroundColor = Colors.correctColor
@@ -107,7 +165,10 @@ class MainVC: UIViewController {
         lblAnswer3.text = "\(lblAnswer3.text!)   :    \(correctAnswer.answers[2].ct!)"
     }
     func setupViews(currentQuestion:Int) {
-        
+        btnShowAnswer.isEnabled = true
+        btnAskQuestion.isEnabled = true
+        questionTitle.textAlignment = .right
+        questionTitle.textColor = UIColor.black
         questionTitle.text = "\(String(describing :currentQuestion + 1)) - \(questions[currentQuestion].text!)"
         viewAnswer1.backgroundColor = Colors.defaultColor
         viewAnswer2.backgroundColor = Colors.defaultColor
@@ -132,8 +193,15 @@ class MainVC: UIViewController {
         }
         if currentQuestion != 0 {
             btnPrev.isHidden = false
-        }else{
+            }else{
             btnPrev.isHidden = true
+        }
+        if questions[currentQuestion].lifeUsage! == true {
+            lblLifeUsage.text = ""
+            lblLifeUsage.textColor = UIColor.red
+        }else{
+            lblLifeUsage.text = ""
+            lblLifeUsage.textColor = UIColor.black
         }
     }
     func setupAnimation(){
@@ -149,7 +217,27 @@ class MainVC: UIViewController {
             }
         }
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDes" {
+            let vc = segue.destination as! DesPopOverVC
+            vc.questions = self.questions
+            vc.quizId = self.quizId
+            let popOver = segue.destination.popoverPresentationController
+            popOver?.sourceRect = CGRect(x: btnDes.bounds.midX, y: btnDes.bounds.midY, width: 0, height: 0)
+        }
+        if segue.identifier == "viewDes" {
+            let vc = segue.destination as! ViewDesVC
+            for each in descriptionTxt {
+                if each.questionIndex == currentQuestion {
+                    vc.des = each.descriptionText
+                }
+            }
+        }
+        if segue.identifier == "showWinners" {
+            let vc = segue.destination as! WinnersVC
+            vc.quizId = self.quizId
+          }
+    }
     
 }
 extension MainVC:UITableViewDelegate,UITableViewDataSource {

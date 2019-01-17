@@ -8,7 +8,7 @@
 
 import Foundation
 import  Alamofire
-func getQuestionId(completion:@escaping ((String)->())) {
+func getQuestionId(completion:@escaping ((NextQuizModel)->())) {
     let headers :[String:String] = [
         "t":"\(Constants.token)"
     ]
@@ -21,12 +21,20 @@ func getQuestionId(completion:@escaping ((String)->())) {
     ]
    let url = MyURLs.sessionStart
     Alamofire.request(url, method: .post, parameters: params , encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
+        let nextQuizR = NextQuizModel()
         let responseJSON = response.result.value as? [String:Any]
         if let responseJSONUW = responseJSON {
             let result = responseJSONUW["result"] as? [String:Any]
             if let resultUW = result {
                 let nextQuiz = resultUW["nextQuiz"] as? [String:Any]
-                completion(nextQuiz!["_id"] as! String)
+                if let nextQuizUW = nextQuiz {
+                nextQuizR.id = nextQuiz!["_id"] as? String
+                nextQuizR.name = nextQuiz!["_name"] as? String
+                nextQuizR.award = nextQuiz!["award"] as? String
+                nextQuizR.startDate = nextQuiz!["startDate"] as? String
+                nextQuizR.status = nextQuiz!["status"] as? Int
+                }
+                completion(nextQuizR)
             }
         }
     }

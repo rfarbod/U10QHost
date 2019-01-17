@@ -6,6 +6,7 @@ target 'U10QHost' do
   use_frameworks!
 
   # Pods for U10QHost
+  pod 'RealmSwift'
   pod  'Alamofire' 
   pod  'lottie-ios'
   pod 'Socket.IO-Client-Swift', '~> 13.3.0'
@@ -14,4 +15,5 @@ pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
  pod 'Arrow'
   pod 'ReachabilitySwift'
   pod 'Kingfisher'
+  pod 'IQKeyboardManagerSwift'
 end
