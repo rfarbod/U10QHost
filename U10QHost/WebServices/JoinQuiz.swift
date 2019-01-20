@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Toaster
 func JoinQuiz(questionId:String) {
     let headers:[String:String] =
     [
@@ -18,6 +19,8 @@ func JoinQuiz(questionId:String) {
     ]
     Alamofire.request(MyURLs.JoinQuiz, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
          MySocket.connectSocket()
+         Toast(text: "همه چی خوبه!!") .show()
+
     }
 }
 

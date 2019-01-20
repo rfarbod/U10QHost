@@ -12,6 +12,7 @@ import Spring
 import Kingfisher
 var mainVC:MainVC? = nil
 class MainVC: UIViewController {
+    @IBOutlet weak var btnStart: DesignableButton!
     @IBOutlet weak var btnShowAnswer: DesignableButton!
     @IBOutlet weak var btnAskQuestion: DesignableButton!
     @IBOutlet weak var btnShowWinners: DesignableButton!
@@ -37,7 +38,7 @@ class MainVC: UIViewController {
     var currentQuestion:Int = 0
     var correctAnswer:Int = 0
     var quizId = String()
-    var currentTime = Int()
+    var currentTime = 13
     var timer       = Timer()
     lazy var logic = MainLC(self)
     override func viewDidLoad() {
@@ -57,9 +58,14 @@ class MainVC: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    @IBAction func pressedStart(_ sender: UIButton) {
+          StartQuiz(questionId: self.quizId)
+          btnStart.isHidden = true
+    }
     @IBAction func pressedAskQuestion(_ sender: UIButton) {
         logic.askAQuestion(quizId: self.quizId, questionIndex: currentQuestion)
         btnAskQuestion.isEnabled = false
+        btnShowAnswer.isEnabled = false
         btnNext.isEnabled = false
         btnPrev.isEnabled = false
         
@@ -78,6 +84,7 @@ class MainVC: UIViewController {
         }
     }
     @IBAction func showCorrectAnswer(_ sender: DesignableButton) {
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTime), userInfo: nil, repeats: true)
         btnShowAnswer.isEnabled = false
         logic.showAnAnswer(quizId: quizId, questionIndex: currentQuestion)
         logic.requestAnswer(questionId: quizId, questionIndex: currentQuestion) { (correctAnswer) in
@@ -123,17 +130,22 @@ class MainVC: UIViewController {
     }
     @objc func updateTime() {
         questionTitle.text = questions[currentQuestion].text
-        if currentTime < 10 {
-           currentTime = currentTime + 1
+        if currentTime != 0 {
+            btnShowAnswer.isEnabled = false
+            btnAskQuestion.isEnabled = false
+            btnNext.isEnabled = false
+            btnNext.isEnabled = false
+           currentTime = currentTime - 1
            questionTitle.text = "\(questionTitle.text!) (\(currentTime))"
         }else {
             questionTitle.text = "وقت تمام شد"
             questionTitle.textAlignment = .center
             questionTitle.textColor = UIColor.red
-            currentTime = 0
+            currentTime = 13
             timer.invalidate()
             btnNext.isEnabled = true
             btnPrev.isEnabled = true
+            btnShowAnswer.isEnabled = true
         }
     }
     func questionsRecived(questions:[QuestionModel]) {
@@ -241,6 +253,13 @@ class MainVC: UIViewController {
     
 }
 extension MainVC:UITableViewDelegate,UITableViewDataSource {
+    func tableView(_ tableView: UITableView, editActionsForRowAt: IndexPath) -> [UITableViewRowAction]? {
+        let silent = UITableViewRowAction(style: .normal, title: "دکمه") { action, index in
+            silentUser(username: self.usernames[index.row].username, isSilent: 1)
+        }
+        silent.backgroundColor = UIColor.red
+        return [silent]
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return chats.count
     }

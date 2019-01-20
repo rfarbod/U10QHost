@@ -21,7 +21,6 @@ class MainLC {
                 self.mainVC?.questionsRecived(questions:questions)
                 self.mainVC?.quizId = string.id!
                 self.mainVC?.descriptionTxt = self.getDes(quizId: string.id!)
-                JoinQuiz(questionId: string.id!)
     
             })
             }

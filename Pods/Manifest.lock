@@ -15,6 +15,7 @@ PODS:
   - Spring (1.0.6)
   - Starscream (3.0.6)
   - SwiftyJSON (4.2.0)
+  - Toaster (2.1.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - Socket.IO-Client-Swift (~> 13.3.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SwiftyJSON
+  - Toaster
 
 EXTERNAL SOURCES:
   Spring:
@@ -50,7 +52,8 @@ SPEC CHECKSUMS:
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: 621a2d61c994187ea9aa06ea131dfff31aa1d1ce
+PODFILE CHECKSUM: 95bc1324db6011f6b5e53644bc1c83b9b9d64ae9
 
 COCOAPODS: 1.4.0

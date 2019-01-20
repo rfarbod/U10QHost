@@ -57,8 +57,11 @@
 		27404E9921EE4EB200D71F3B /* WinnersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27404E9821EE4EB200D71F3B /* WinnersCell.swift */; };
 		2746C58F21EE1743002BC21F /* AskQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746C58E21EE1743002BC21F /* AskQuestion.swift */; };
 		2746C59121EE224A002BC21F /* ShowAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2746C59021EE224A002BC21F /* ShowAnswer.swift */; };
+		27B38AFF21F46D6A0015698C /* DecisonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B38AFE21F46D6A0015698C /* DecisonVC.swift */; };
+		27B38B0121F486030015698C /* StartQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B38B0021F486030015698C /* StartQuiz.swift */; };
 		27CAE1C021EDFF0D00662400 /* ViewDesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CAE1BF21EDFF0D00662400 /* ViewDesVC.swift */; };
 		27CAE1C221EE0F7A00662400 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27CAE1C121EE0F7900662400 /* icomoon.ttf */; };
+		27D505D821F333930084D59B /* SilentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D505D721F333930084D59B /* SilentUser.swift */; };
 		27FD762F21EC9ADD00142989 /* JResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD762E21EC9ADD00142989 /* JResponse.swift */; };
 		27FD763121EC9AF600142989 /* JResSocketAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD763021EC9AF600142989 /* JResSocketAuth.swift */; };
 		27FD763321ECA55300142989 /* DesPopOverVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD763221ECA55300142989 /* DesPopOverVC.swift */; };
@@ -122,8 +125,11 @@
 		27404E9821EE4EB200D71F3B /* WinnersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnersCell.swift; sourceTree = "<group>"; };
 		2746C58E21EE1743002BC21F /* AskQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskQuestion.swift; sourceTree = "<group>"; };
 		2746C59021EE224A002BC21F /* ShowAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowAnswer.swift; sourceTree = "<group>"; };
+		27B38AFE21F46D6A0015698C /* DecisonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecisonVC.swift; sourceTree = "<group>"; };
+		27B38B0021F486030015698C /* StartQuiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartQuiz.swift; sourceTree = "<group>"; };
 		27CAE1BF21EDFF0D00662400 /* ViewDesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDesVC.swift; sourceTree = "<group>"; };
 		27CAE1C121EE0F7900662400 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
+		27D505D721F333930084D59B /* SilentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SilentUser.swift; sourceTree = "<group>"; };
 		27FD762E21EC9ADD00142989 /* JResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JResponse.swift; path = ../../../../../Downloads/JResponse.swift; sourceTree = "<group>"; };
 		27FD763021EC9AF600142989 /* JResSocketAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JResSocketAuth.swift; path = ../../../../../Downloads/JResSocketAuth.swift; sourceTree = "<group>"; };
 		27FD763221ECA55300142989 /* DesPopOverVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesPopOverVC.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 				27CAE1BF21EDFF0D00662400 /* ViewDesVC.swift */,
 				27404E9421EE4C8E00D71F3B /* WinnersVC.swift */,
 				27404E9621EE4D2300D71F3B /* WinnersLC.swift */,
+				27B38AFE21F46D6A0015698C /* DecisonVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -293,6 +300,8 @@
 				27404E8C21EE32E500D71F3B /* EndQuiz.swift */,
 				27404E8E21EE350900D71F3B /* showWinners.swift */,
 				27404E9221EE499B00D71F3B /* GetWinners.swift */,
+				27D505D721F333930084D59B /* SilentUser.swift */,
+				27B38B0021F486030015698C /* StartQuiz.swift */,
 			);
 			path = WebServices;
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -433,6 +443,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +498,7 @@
 				18A491C421EB6F010091481C /* MFileToSend.swift in Sources */,
 				18D59E4021EA963B00A5AFE3 /* MainLC.swift in Sources */,
 				27404E9521EE4C8E00D71F3B /* WinnersVC.swift in Sources */,
+				27B38B0121F486030015698C /* StartQuiz.swift in Sources */,
 				18A491BC21EB6E890091481C /* JQuestion.swift in Sources */,
 				18331CBB21EBA64E00FC5462 /* KingfisherExtension.swift in Sources */,
 				18A4919C21EB58E20091481C /* ViewAnswerModel.swift in Sources */,
@@ -494,6 +506,8 @@
 				18A491BA21EB6E5F0091481C /* JNotData.swift in Sources */,
 				27FD763A21ECBB5E00142989 /* Question.swift in Sources */,
 				27FD763C21ECBD5000142989 /* SubmitDesVC.swift in Sources */,
+				27B38AFF21F46D6A0015698C /* DecisonVC.swift in Sources */,
+				27D505D821F333930084D59B /* SilentUser.swift in Sources */,
 				18331CB921EB9ED900FC5462 /* ChatCell.swift in Sources */,
 				18D59E2D21EA950D00A5AFE3 /* AppDelegate.swift in Sources */,
 				27404E9321EE499B00D71F3B /* GetWinners.swift in Sources */,

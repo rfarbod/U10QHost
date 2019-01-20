@@ -9,16 +9,17 @@
 
 import SocketIO
 import Arrow
-
+import Foundation
 class MySocket: NSObject {
     static var soketIsAuth = false
     static var resSocketAuth: JResSocketAuth? = nil
     
-    static let manager = SocketManager(socketURL: URL(string: "http://tpi.u10q.com:7703/")!, config: [.log(true), .compress, .forceWebsockets(true),.reconnects(true),.reconnectWait(1)])
+    static let manager = SocketManager(socketURL: URL(string: Constants.socket)!, config: [.log(true), .compress, .forceWebsockets(true),.reconnects(true),.reconnectWait(1)])
     static let socket = manager.defaultSocket
-    
     // connect and listen for events
     static func connectSocket(){
+        print(Constants.token)
+        print(Constants.socket)
         socket.on("connect") { data, ack in
             socket.emitWithAck("auth", [
                 "tn": Constants.token

@@ -8,8 +8,8 @@
 
 import Foundation
 class Constants {
- static let token = "Qt8FnPsmUZJWhEjqjN3hQH7Hu633mTEbHZ+XunGeyo0="
-    static let api = "http://tpi.u10q.com:7700"
-    static let socket = "http://tpi.u10q.com:7703"
-    static let media = "http://api.u10q.com"
+ static var token = "k1c1/boOxSgtr89RIEEHfTbTUuO1BP49WoZO+53vk6U="
+    static var api = "http://tpi.u10q.com:7700"
+    static var socket = "http://tpi.u10q.com:7703"
+    static var media = "http://api.uneed.com"
 }

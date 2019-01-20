@@ -16,4 +16,5 @@ pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   pod 'ReachabilitySwift'
   pod 'Kingfisher'
   pod 'IQKeyboardManagerSwift'
+  pod 'Toaster'
 end

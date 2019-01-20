@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import Toaster
 func GetQuestions(questionId:String,completion:@escaping (([QuestionModel])->())){
     let headers:[String:String] = [
         "t":Constants.token
@@ -41,6 +42,8 @@ func GetQuestions(questionId:String,completion:@escaping (([QuestionModel])->())
                         }
                        Questions.append(singleQuestion)
                     }
+                }else{
+                    Toast(text: "کووییز نداریم دلبندم").show()
                 }
                 completion(Questions)
             }
