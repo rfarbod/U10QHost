@@ -59,8 +59,40 @@ class MainVC: UIViewController {
         return .lightContent
     }
     @IBAction func pressedStart(_ sender: UIButton) {
-          StartQuiz(questionId: self.quizId)
-          btnStart.isHidden = true
+        
+        let alert = UIAlertController(title: "شروع مسابقه", message: "مطمعنی عزیزم؟", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "آره", style: .destructive, handler: { action in
+           StartQuiz(questionId: self.quizId)
+            self.btnStart.isHidden = true
+          }))
+        alert.addAction(UIAlertAction(title: "نه", style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    @IBAction func pressedFastShowWinners(_ sender: UIButton) {
+        let alert = UIAlertController(title: "نمایش برندگان", message: "مطمعنی عزیزم؟", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "آره", style: .destructive, handler: { action in
+            self.logic.showAWinners(quizId: self.quizId)
+            self.performSegue(withIdentifier: "showWinners", sender: self)
+            
+        }))
+        alert.addAction(UIAlertAction(title: "نه", style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    @IBAction func pressedFastEnd(_ sender: UIButton) {
+        let alert = UIAlertController(title: "پایان مسابقه", message: "مطمعنی عزیزم؟", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "آره", style: .destructive, handler: { action in
+            endQuiz(quizId: self.quizId)
+        
+        }))
+        alert.addAction(UIAlertAction(title: "نه", style: .default, handler: { (action) in
+            
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     @IBAction func pressedAskQuestion(_ sender: UIButton) {
         logic.askAQuestion(quizId: self.quizId, questionIndex: currentQuestion)

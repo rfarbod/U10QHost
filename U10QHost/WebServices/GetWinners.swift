@@ -8,7 +8,7 @@
 
 import Foundation
 import Alamofire
-func GetWinners(quizId:String,completion:@escaping (([WinnerModel])->())) {
+func GetWinners(quizId:String,completion:@escaping (([WinnerModel],Int?)->())) {
     var allWinners = [WinnerModel]()
     let params:[String:Any] = [
         "qi":quizId
@@ -18,10 +18,10 @@ func GetWinners(quizId:String,completion:@escaping (([WinnerModel])->())) {
     ]
     Alamofire.request(MyURLs.getWinners, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).validate().responseJSON { (response) in
         let responseJSON = response.result.value as? [String:Any]
-        print(responseJSON)
         if let responseJSONUW = responseJSON {
             let result = responseJSONUW["result"] as? [String:Any]
             if let resultUW = result {
+                let winnerCount = resultUW["winnersCount"] as? Int
                 let winners = resultUW["winners"] as? [NSDictionary]
                 for each in winners! {
                     let singleWinner = WinnerModel()
@@ -32,7 +32,7 @@ func GetWinners(quizId:String,completion:@escaping (([WinnerModel])->())) {
                     singleWinner.username = each["username"] as? String
                     allWinners.append(singleWinner)
                 }
-              completion(allWinners)
+              completion(allWinners,winnerCount)
             }
         }
     }

@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="48" width="600" height="552"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="winnerCell" rowHeight="85" id="Tqz-Ob-mPS" customClass="WinnersCell" customModule="U10QHost" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="winnerCell" rowHeight="85" id="Tqz-Ob-mPS" customClass="WinnersCell" customModule="U10QHost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="600" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tqz-Ob-mPS" id="Iy3-Ck-fgn">
@@ -50,14 +50,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GHl-MT-UBl">
-                                                    <rect key="frame" x="517" y="11" width="60" height="60"/>
+                                                    <rect key="frame" x="349" y="11" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="EI3-H3-jvE"/>
                                                         <constraint firstAttribute="height" constant="60" id="OiS-kx-42C"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x8v-ZI-Wlo">
-                                                    <rect key="frame" x="30" y="11" width="472" height="63"/>
+                                                    <rect key="frame" x="30" y="11" width="304" height="63"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="63" id="7t3-ld-3KX"/>
                                                     </constraints>
@@ -524,10 +524,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="32K-of-mqK" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="264" y="8" width="200" height="30"/>
+                                        <rect key="frame" x="202.5" y="12" width="172" height="38"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="Wrm-fH-5hf"/>
+                                            <constraint firstAttribute="width" constant="172" id="Xss-rW-kSw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
                                         <state key="normal" title="اضافه کردن توضیحات">
@@ -542,26 +542,6 @@
                                             <segue destination="G0G-A2-cMG" kind="popoverPresentation" identifier="goToDes" popoverAnchorView="32K-of-mqK" id="1Ea-OA-728">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-xL-rap" customClass="DesignableButton" customModule="Spring">
-                                        <rect key="frame" x="304" y="158" width="120" height="34"/>
-                                        <color key="backgroundColor" red="0.84212130159999998" green="0.0" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="09n-Aj-vAz"/>
-                                            <constraint firstAttribute="height" constant="34" id="5J4-eb-Maf"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
-                                        <state key="normal" title="توضیحات سوال">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="pressedViewDes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxU-xF-zEh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6n-9q-FxH">
@@ -672,29 +652,85 @@
                                             <action selector="pressedEndQuiz:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vwG-Tw-Dxv"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNU-xL-rap" customClass="DesignableButton" customModule="Spring">
+                                        <rect key="frame" x="374.5" y="12" width="172" height="38"/>
+                                        <color key="backgroundColor" red="0.84212130159999998" green="0.0" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                        <state key="normal" title="توضیحات سوال">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressedViewDes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxU-xF-zEh"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="9fq-Tr-DAP">
+                                        <rect key="frame" x="212.5" y="148" width="303" height="32"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbI-7x-Trz" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="0.0" y="0.0" width="151.5" height="32"/>
+                                                <color key="backgroundColor" red="0.62745098040000002" green="0.76078431369999999" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                                <state key="normal" title="نمایش فوری برندگان">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pressedFastShowWinners:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gNX-jv-AID"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsU-nw-4kK" customClass="DesignableButton" customModule="Spring">
+                                                <rect key="frame" x="151.5" y="0.0" width="151.5" height="32"/>
+                                                <color key="backgroundColor" red="0.84212130159999998" green="0.0" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="IRANSansMobileFaNum" family="IRANSansMobile(FaNum)" pointSize="17"/>
+                                                <state key="normal" title="پایان فوری مسابقه">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pressedFastEnd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0K-0q-MDl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="303" id="zJt-37-SAW"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="VNU-xL-rap" firstAttribute="centerX" secondItem="Fx5-nT-8G8" secondAttribute="centerX" id="159-8X-11f"/>
                                     <constraint firstItem="CF9-Rr-30w" firstAttribute="leading" secondItem="Fx5-nT-8G8" secondAttribute="leading" constant="20" id="17w-bd-BjL"/>
                                     <constraint firstAttribute="trailing" secondItem="ZeL-Sc-fz7" secondAttribute="trailing" constant="5" id="1j8-J3-nHA"/>
-                                    <constraint firstItem="32K-of-mqK" firstAttribute="centerX" secondItem="Fx5-nT-8G8" secondAttribute="centerX" id="4QC-tC-2qo"/>
                                     <constraint firstItem="rWL-0i-zny" firstAttribute="leading" secondItem="es9-2I-vrm" secondAttribute="trailing" constant="5" id="4dY-3i-dJM"/>
+                                    <constraint firstItem="VNU-xL-rap" firstAttribute="height" secondItem="32K-of-mqK" secondAttribute="height" id="5qy-hj-UOE"/>
                                     <constraint firstItem="I3s-44-z4y" firstAttribute="top" secondItem="CF9-Rr-30w" secondAttribute="bottom" constant="8" id="9Ag-er-zaK"/>
                                     <constraint firstItem="FKI-GA-AWO" firstAttribute="leading" secondItem="Fx5-nT-8G8" secondAttribute="leading" constant="5" id="Btn-Pj-7Ij"/>
                                     <constraint firstItem="ZeL-Sc-fz7" firstAttribute="leading" secondItem="rWL-0i-zny" secondAttribute="trailing" constant="64" id="E6p-Mn-ESC"/>
                                     <constraint firstItem="rWL-0i-zny" firstAttribute="top" secondItem="Wif-XT-jq5" secondAttribute="bottom" constant="22" id="H7u-xT-rTe"/>
-                                    <constraint firstItem="32K-of-mqK" firstAttribute="top" secondItem="Fx5-nT-8G8" secondAttribute="top" constant="8" id="Ly8-2O-KAO"/>
                                     <constraint firstItem="es9-2I-vrm" firstAttribute="leading" secondItem="FKI-GA-AWO" secondAttribute="trailing" constant="64" id="Mdp-lF-qTp"/>
                                     <constraint firstItem="Wif-XT-jq5" firstAttribute="leading" secondItem="Fx5-nT-8G8" secondAttribute="leading" constant="15" id="PS0-xn-Chl"/>
+                                    <constraint firstItem="9fq-Tr-DAP" firstAttribute="top" secondItem="32K-of-mqK" secondAttribute="bottom" constant="98" id="Q4T-cZ-ytH"/>
                                     <constraint firstAttribute="bottom" secondItem="FKI-GA-AWO" secondAttribute="bottom" constant="10" id="Qre-tO-9jV"/>
                                     <constraint firstItem="es9-2I-vrm" firstAttribute="top" secondItem="Wif-XT-jq5" secondAttribute="bottom" constant="22" id="T2L-mA-3dj"/>
                                     <constraint firstItem="3TV-Xx-lr2" firstAttribute="top" secondItem="Fx5-nT-8G8" secondAttribute="top" constant="20" id="UoT-WQ-5yF"/>
-                                    <constraint firstItem="VNU-xL-rap" firstAttribute="top" secondItem="I3s-44-z4y" secondAttribute="bottom" constant="8" id="Ux6-Dc-eKQ"/>
                                     <constraint firstItem="LIJ-8R-Dd8" firstAttribute="top" secondItem="Wif-XT-jq5" secondAttribute="bottom" constant="22" id="Wdw-Ej-SCJ"/>
+                                    <constraint firstItem="VNU-xL-rap" firstAttribute="leading" secondItem="32K-of-mqK" secondAttribute="trailing" id="Wen-eT-upc"/>
                                     <constraint firstAttribute="bottom" secondItem="rWL-0i-zny" secondAttribute="bottom" constant="8" id="XOh-XP-Kxh"/>
                                     <constraint firstAttribute="trailing" secondItem="3TV-Xx-lr2" secondAttribute="trailing" constant="15" id="XT0-7b-31e"/>
                                     <constraint firstAttribute="trailing" secondItem="w6n-9q-FxH" secondAttribute="trailing" constant="20" id="Y2e-ej-PT0"/>
+                                    <constraint firstItem="32K-of-mqK" firstAttribute="centerY" secondItem="CF9-Rr-30w" secondAttribute="centerY" id="YRc-FM-Fp8"/>
                                     <constraint firstItem="HJv-eo-spl" firstAttribute="centerX" secondItem="Fx5-nT-8G8" secondAttribute="centerX" id="ZXi-6Y-ZdF"/>
                                     <constraint firstItem="n2x-BQ-lui" firstAttribute="leading" secondItem="FKI-GA-AWO" secondAttribute="trailing" constant="64" id="aOg-C9-bzq"/>
                                     <constraint firstAttribute="bottom" secondItem="n2x-BQ-lui" secondAttribute="bottom" constant="8" id="aRi-sS-6Y6"/>
@@ -703,17 +739,22 @@
                                     <constraint firstItem="ZeL-Sc-fz7" firstAttribute="leading" secondItem="LIJ-8R-Dd8" secondAttribute="trailing" constant="64" id="bbE-fz-ytZ"/>
                                     <constraint firstItem="I3s-44-z4y" firstAttribute="leading" secondItem="Fx5-nT-8G8" secondAttribute="leading" constant="8" id="eRk-BB-hLW"/>
                                     <constraint firstItem="Wif-XT-jq5" firstAttribute="top" secondItem="I3s-44-z4y" secondAttribute="bottom" constant="40" id="gMb-Vu-pnu"/>
+                                    <constraint firstItem="32K-of-mqK" firstAttribute="leading" secondItem="CF9-Rr-30w" secondAttribute="trailing" constant="25" id="gYP-ze-qma"/>
                                     <constraint firstItem="LIJ-8R-Dd8" firstAttribute="leading" secondItem="n2x-BQ-lui" secondAttribute="trailing" constant="5" id="hLh-Jp-LyF"/>
                                     <constraint firstAttribute="bottom" secondItem="HJv-eo-spl" secondAttribute="bottom" constant="8" id="i8E-JM-xLi"/>
+                                    <constraint firstItem="VNU-xL-rap" firstAttribute="centerY" secondItem="32K-of-mqK" secondAttribute="centerY" id="krM-xM-pW8"/>
                                     <constraint firstItem="HJv-eo-spl" firstAttribute="top" secondItem="Wif-XT-jq5" secondAttribute="bottom" constant="22" id="lJf-eM-gfI"/>
                                     <constraint firstAttribute="bottom" secondItem="es9-2I-vrm" secondAttribute="bottom" constant="8" id="lfm-p6-lrO"/>
+                                    <constraint firstItem="9fq-Tr-DAP" firstAttribute="centerX" secondItem="Fx5-nT-8G8" secondAttribute="centerX" id="mqq-8q-PoA"/>
+                                    <constraint firstItem="VNU-xL-rap" firstAttribute="width" secondItem="32K-of-mqK" secondAttribute="width" id="oDb-EG-REF"/>
+                                    <constraint firstItem="32K-of-mqK" firstAttribute="top" secondItem="Fx5-nT-8G8" secondAttribute="top" constant="12" id="pks-ti-XzY"/>
                                     <constraint firstAttribute="trailing" secondItem="Wif-XT-jq5" secondAttribute="trailing" constant="15" id="ruM-KY-vpg"/>
                                     <constraint firstItem="w6n-9q-FxH" firstAttribute="top" secondItem="Fx5-nT-8G8" secondAttribute="top" constant="50" id="t8V-wW-Y6F"/>
                                     <constraint firstAttribute="bottom" secondItem="ZeL-Sc-fz7" secondAttribute="bottom" constant="10" id="t8y-fI-d5m"/>
                                     <constraint firstItem="CF9-Rr-30w" firstAttribute="top" secondItem="Fx5-nT-8G8" secondAttribute="top" constant="20" id="uDu-lA-s8k"/>
                                     <constraint firstItem="n2x-BQ-lui" firstAttribute="top" secondItem="Wif-XT-jq5" secondAttribute="bottom" constant="22" id="ubt-Nn-Cia"/>
                                     <constraint firstAttribute="trailing" secondItem="I3s-44-z4y" secondAttribute="trailing" constant="87" id="uow-on-4bZ"/>
-                                    <constraint firstItem="I3s-44-z4y" firstAttribute="top" secondItem="32K-of-mqK" secondAttribute="bottom" constant="12" id="wZg-mi-JZ0"/>
+                                    <constraint firstItem="Wif-XT-jq5" firstAttribute="top" secondItem="9fq-Tr-DAP" secondAttribute="bottom" constant="10" id="vvK-qK-uAn"/>
                                     <constraint firstAttribute="bottom" secondItem="LIJ-8R-Dd8" secondAttribute="bottom" constant="8" id="wvH-1H-YWx"/>
                                     <constraint firstItem="rWL-0i-zny" firstAttribute="leading" secondItem="n2x-BQ-lui" secondAttribute="trailing" constant="5" id="xcY-1p-0Mg"/>
                                     <constraint firstItem="Wif-XT-jq5" firstAttribute="top" secondItem="w6n-9q-FxH" secondAttribute="bottom" constant="50" id="zQN-Ym-zKg"/>

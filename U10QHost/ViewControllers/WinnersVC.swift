@@ -33,10 +33,10 @@ class WinnersVC: UIViewController {
             }
         }
     }
-    func recievedWinners(winners:[WinnerModel]) {
+    func recievedWinners(winners:[WinnerModel],winnerCount:Int) {
          allWinners = winners
          tableView.reloadData()
-        lblWinnerCount.text = "تعداد برنده‌ها:\(String(describing:allWinners.count))"
+        lblWinnerCount.text = "تعداد برنده‌ها:\(String(describing:winnerCount))"
         
     }
     @IBAction func dismissPressed(_ sender: UIButton) {
