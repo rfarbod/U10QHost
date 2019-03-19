@@ -20,10 +20,18 @@ class MySocket: NSObject {
     static func connectSocket(){
         print(Constants.token)
         print(Constants.socket)
+        var  paramsDic = [String:Any]()
+        if Constants.token == "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo=" {
+            paramsDic = [
+                "tn":Constants.token,
+                "at":"imfromyou"
+                ]
+        }else{
+            paramsDic = ["tn":Constants.token]
+        }
+        print(Constants.token)
         socket.on("connect") { data, ack in
-            socket.emitWithAck("auth", [
-                "tn": Constants.token
-                ]).timingOut(after: 0) {data in
+            socket.emitWithAck("auth", paramsDic).timingOut(after: 0) {data in
                     if let json = JSON(data[0]) {
                         var response = JResponse(JResSocketAuth.self)
                         response.deserialize(json)

@@ -14,7 +14,8 @@ func showAnswer(quizId:String,questionIndex:Int) {
         "qn":questionIndex
     ]
     let headers:[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     Alamofire.request(MyURLs.showAnswer, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (success) in
         

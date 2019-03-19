@@ -10,11 +10,12 @@ import Foundation
 import  Alamofire
 func getQuestionId(completion:@escaping ((NextQuizModel)->())) {
     let headers :[String:String] = [
-        "t":"\(Constants.token)"
+        "t":"\(Constants.token)",
+        "a":"imfromyou"
     ]
     let params:[String:Any] = [
         "pl":2,
-        "bl":1,
+        "bl":30,
         "di":"testing",
         "dn":"iPad",
         "os":"11.2.5"
@@ -22,6 +23,7 @@ func getQuestionId(completion:@escaping ((NextQuizModel)->())) {
    let url = MyURLs.sessionStart
     Alamofire.request(url, method: .post, parameters: params , encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
         let nextQuizR = NextQuizModel()
+        print(response.result.value)
         let responseJSON = response.result.value as? [String:Any]
         if let responseJSONUW = responseJSON {
             let result = responseJSONUW["result"] as? [String:Any]

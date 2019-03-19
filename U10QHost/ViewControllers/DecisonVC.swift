@@ -36,7 +36,7 @@ class DecisonVC: UIViewController {
     }
     @IBAction func pressedTest(_ sender: UIButton) {
         Constants.api = "http://tpi.uneed.ir:7700"
-        Constants.token = "k1c1/boOxSgtr89RIEEHfTbTUuO1BP49WoZO+53vk6U="
+        Constants.token = "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo="
         Constants.socket = "http://tpi.uneed.ir:7703/"
         Constants.media = "http://tpi.uneed.ir:7700/m/"
         MyURLs.media = "http://tpi.uneed.ir:7700/m/"
@@ -49,7 +49,8 @@ class DecisonVC: UIViewController {
         }else{
             Constants.api = "http://tpi.u10q.com:7700"
             Constants.token = tfToken.text!
-            Constants.socket = "http://tpi.u10q.com:7703/"
+//            Constants.socket = "http://tpi.u10q.com:7703/"
+            Constants.socket = "http://136.243.24.203:7703/"
             Constants.media = "http://tpi.u10q.com:7700/m/"
             MyURLs.media = "http://tpi.u10q.com:7700/m/"
             self.performSegue(withIdentifier: "goToMain", sender: self)

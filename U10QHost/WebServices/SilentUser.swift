@@ -14,7 +14,8 @@ func silentUser(username:String,isSilent:Int){
         "isSilent":isSilent
     ]
     let headers :[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     Alamofire.request(MyURLs.silentUser, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
         print(response.result.value!)

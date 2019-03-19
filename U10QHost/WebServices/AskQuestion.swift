@@ -14,7 +14,8 @@ func askQuestion(quizId:String,questionIndex:Int,completion:@escaping((Bool)->()
         "qn":questionIndex
     ]
     let headers:[String:String] = [
-        "t": Constants.token
+        "t": Constants.token,
+        "a":"imfromyou"
     ]
     Alamofire.request(MyURLs.askQuestion, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
     

@@ -13,7 +13,8 @@ func showWinners(quizId:String) {
         "qi":quizId
     ]
     let headers:[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     Alamofire.request(MyURLs.showWinners, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
         

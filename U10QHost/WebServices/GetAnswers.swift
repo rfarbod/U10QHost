@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 func getAnswers(questionId:String,questionIndex:Int,completion:@escaping ((GetAnswerModel)->())) {
     let headers:[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     let params:[String:Any] = [
         "qi": questionId,

@@ -11,13 +11,15 @@ import Alamofire
 import Toaster
 func GetQuestions(questionId:String,completion:@escaping (([QuestionModel])->())){
     let headers:[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     let params:[String:Any] = [
         "qi":questionId
     ]
     Alamofire.request(MyURLs.Questions, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
         var Questions:[QuestionModel] = []
+        print(response.result.value)
         let responseJSON = response.result.value as? [String:Any]
         if let responseUW = responseJSON {
             let result = responseUW["result"] as? [String:Any]

@@ -10,7 +10,8 @@ import Foundation
 import Alamofire
 func StartQuiz(questionId:String) {
     let headers:[String:String] = [
-        "t":Constants.token
+        "t":Constants.token,
+        "a":"imfromyou"
     ]
     let params:[String:Any] = [
         "qi":questionId
