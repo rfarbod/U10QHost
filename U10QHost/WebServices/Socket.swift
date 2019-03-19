@@ -27,7 +27,9 @@ class MySocket: NSObject {
                 "at":"imfromyou"
                 ]
         }else{
-            paramsDic = ["tn":Constants.token]
+            paramsDic = ["tn":Constants.token
+                ,"id":"somethingsomething"
+            ]
         }
         print(Constants.token)
         socket.on("connect") { data, ack in
