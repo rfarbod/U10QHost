@@ -11,7 +11,7 @@ import  Alamofire
 func getQuestionId(completion:@escaping ((NextQuizModel)->())) {
     let headers :[String:String] = [
         "t":"\(Constants.token)",
-        "a":"imfromyou"
+        "a":"newHeaderTHIS_@2"
     ]
     let params:[String:Any] = [
         "pl":2,

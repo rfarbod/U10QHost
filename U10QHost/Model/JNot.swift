@@ -14,7 +14,7 @@ struct JNot: ArrowParsable {
     var title = String()
     var subtitle = String()
     var data = JNotData()
-    
+
     
     mutating func deserialize(_ json: JSON) {
         title      <-- json["title"]

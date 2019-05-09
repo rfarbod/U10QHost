@@ -34,6 +34,7 @@ class MainVC: UIViewController {
     var chats:[String] = []
     var usernames:[JUserComment] = []
     var questions:[QuestionModel] = []
+    var quizInfo = QuizInfoModel()
     var descriptionTxt:[Question] = []
     var currentQuestion:Int = 0
     var correctAnswer:Int = 0
@@ -57,6 +58,9 @@ class MainVC: UIViewController {
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+    @IBAction func pressedInfo(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "showInfo", sender: self)
     }
     @IBAction func pressedStart(_ sender: UIButton) {
         
@@ -281,6 +285,25 @@ class MainVC: UIViewController {
             let vc = segue.destination as! WinnersVC
             vc.quizId = self.quizId
           }
+        if segue.identifier == "showInfo" {
+            let vc = segue.destination as! InfoVC
+            if quizInfo.amount != nil {
+            vc.awards.append(quizInfo.amount!)
+            }
+            if quizInfo.amounts != nil {
+            vc.awards.append(contentsOf: quizInfo.amounts!)
+            }
+            if quizInfo.streamLinks != nil {
+            vc.streamLinks.append(contentsOf: quizInfo.streamLinks!)
+            }
+            if quizInfo.streamLink != nil {
+            vc.streamLinks.append(quizInfo.streamLink!)
+            }
+            if quizInfo.usableLifes != nil {
+            vc.usableLifes =   quizInfo.usableLifes!
+            }
+            
+        }
     }
     
 }

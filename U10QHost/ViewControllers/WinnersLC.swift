@@ -13,8 +13,6 @@ class WinnersLC {
         self.vc = vc
     }
     func requestWinners(quizId:String) {
-        GetWinners(quizId: quizId) { (winners,winnerCount) in
-            self.vc?.recievedWinners(winners: winners,winnerCount:winnerCount!)
-        }
+          showWinners(quizId: quizId)
     }
 }

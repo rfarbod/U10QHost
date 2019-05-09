@@ -82,8 +82,8 @@ class EventsHelper {
     }
     // winners list
     private static let WinnersList = Notification.Name("WinnersList")
-    static func winnersList(cash:String , winner: [JWn]) {
-        NotificationCenter.default.post(name: WinnersList, object: nil, userInfo: ["aw": cash, "wn": winner])
+    static func winnersList(winnersCount:Int , winner: [JWn]) {
+        NotificationCenter.default.post(name: WinnersList, object: nil, userInfo: ["wnc": winnersCount, "wn": winner])
     }
     static func observeWinnersList(_ vc: UIViewController, with callback: Selector) {
         NotificationCenter.default.addObserver(vc, selector: callback, name: WinnersList, object: nil)

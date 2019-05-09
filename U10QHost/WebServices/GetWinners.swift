@@ -15,7 +15,7 @@ func GetWinners(quizId:String,completion:@escaping (([WinnerModel],Int?)->())) {
     ]
     let header:[String:String] = [
         "t":Constants.token,
-        "a":"imfromyou"
+        "a":"newHeaderTHIS_@2"
     ]
     Alamofire.request(MyURLs.getWinners, method: .post, parameters: params, encoding: JSONEncoding.default, headers: header).validate().responseJSON { (response) in
         let responseJSON = response.result.value as? [String:Any]

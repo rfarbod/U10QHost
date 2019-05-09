@@ -15,7 +15,7 @@ func askQuestion(quizId:String,questionIndex:Int,completion:@escaping((Bool)->()
     ]
     let headers:[String:String] = [
         "t": Constants.token,
-        "a":"imfromyou"
+        "a":"newHeaderTHIS_@2"
     ]
     Alamofire.request(MyURLs.askQuestion, method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate().responseJSON { (response) in
     

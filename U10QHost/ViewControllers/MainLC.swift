@@ -17,9 +17,10 @@ class MainLC {
         getQuestionId { (string) in
             print(string)
             if string.id != nil {
-            GetQuestions(questionId: string.id!, completion: { (questions) in
+                GetQuestions(questionId: string.id!, completion: { (questions,quizInfo)  in
                 self.mainVC?.questionsRecived(questions:questions)
                 self.mainVC?.quizId = string.id!
+                self.mainVC?.quizInfo = quizInfo
                 self.mainVC?.descriptionTxt = self.getDes(quizId: string.id!)
     
             })

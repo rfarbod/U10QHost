@@ -69,6 +69,9 @@
 		27FD763721ECA84400142989 /* QuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD763621ECA84400142989 /* QuestionCell.swift */; };
 		27FD763A21ECBB5E00142989 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD763921ECBB5E00142989 /* Question.swift */; };
 		27FD763C21ECBD5000142989 /* SubmitDesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD763B21ECBD5000142989 /* SubmitDesVC.swift */; };
+		27FE55172259E488004CEDE9 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE55162259E488004CEDE9 /* InfoVC.swift */; };
+		27FE55192259E552004CEDE9 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE55182259E552004CEDE9 /* InfoCell.swift */; };
+		27FE551B2259EA03004CEDE9 /* QuizInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FE551A2259EA03004CEDE9 /* QuizInfoModel.swift */; };
 		9E2437166E0DB3261F7F7517 /* Pods_U10QHost.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34788383706B921B93A3EDFE /* Pods_U10QHost.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +140,9 @@
 		27FD763621ECA84400142989 /* QuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCell.swift; sourceTree = "<group>"; };
 		27FD763921ECBB5E00142989 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		27FD763B21ECBD5000142989 /* SubmitDesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitDesVC.swift; sourceTree = "<group>"; };
+		27FE55162259E488004CEDE9 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
+		27FE55182259E552004CEDE9 /* InfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCell.swift; sourceTree = "<group>"; };
+		27FE551A2259EA03004CEDE9 /* QuizInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInfoModel.swift; sourceTree = "<group>"; };
 		34788383706B921B93A3EDFE /* Pods_U10QHost.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_U10QHost.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E7A586DC044F6A4810BCA6 /* Pods-U10QHost.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-U10QHost.debug.xcconfig"; path = "Pods/Target Support Files/Pods-U10QHost/Pods-U10QHost.debug.xcconfig"; sourceTree = "<group>"; };
 		BED1CA0CD2449C9CE8F59FB4 /* Pods-U10QHost.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-U10QHost.release.xcconfig"; path = "Pods/Target Support Files/Pods-U10QHost/Pods-U10QHost.release.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +166,7 @@
 				18331CB821EB9ED900FC5462 /* ChatCell.swift */,
 				27FD763621ECA84400142989 /* QuestionCell.swift */,
 				27404E9821EE4EB200D71F3B /* WinnersCell.swift */,
+				27FE55182259E552004CEDE9 /* InfoCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				27404E9421EE4C8E00D71F3B /* WinnersVC.swift */,
 				27404E9621EE4D2300D71F3B /* WinnersLC.swift */,
 				27B38AFE21F46D6A0015698C /* DecisonVC.swift */,
+				27FE55162259E488004CEDE9 /* InfoVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -271,6 +279,7 @@
 				18A4919B21EB58E20091481C /* ViewAnswerModel.swift */,
 				18A4919D21EB59250091481C /* GetAnswerModel.swift */,
 				27404E9021EE488A00D71F3B /* WinnerModel.swift */,
+				27FE551A2259EA03004CEDE9 /* QuizInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -515,6 +524,7 @@
 				18A491C221EB6EE90091481C /* JQuestionAnswer.swift in Sources */,
 				18A491C621EB70FF0091481C /* StringExtensions.swift in Sources */,
 				18A491C021EB6EAC0091481C /* JTrueAnswerCount.swift in Sources */,
+				27FE55172259E488004CEDE9 /* InfoVC.swift in Sources */,
 				18A4919A21EB58D20091481C /* GetAnswers.swift in Sources */,
 				18D59E5A21EB1E8E00A5AFE3 /* QuestionModel.swift in Sources */,
 				18A491A421EB68A00091481C /* EventsHelper.swift in Sources */,
@@ -522,12 +532,14 @@
 				18A491AA21EB6B810091481C /* JUserComment.swift in Sources */,
 				27FD763321ECA55300142989 /* DesPopOverVC.swift in Sources */,
 				27FD763121EC9AF600142989 /* JResSocketAuth.swift in Sources */,
+				27FE551B2259EA03004CEDE9 /* QuizInfoModel.swift in Sources */,
 				27404E8D21EE32E500D71F3B /* EndQuiz.swift in Sources */,
 				18A491A221EB682F0091481C /* Socket.swift in Sources */,
 				27FD762F21EC9ADD00142989 /* JResponse.swift in Sources */,
 				18D59E5F21EB1FB300A5AFE3 /* MyURLs.swift in Sources */,
 				27404E9121EE488A00D71F3B /* WinnerModel.swift in Sources */,
 				2746C58F21EE1743002BC21F /* AskQuestion.swift in Sources */,
+				27FE55192259E552004CEDE9 /* InfoCell.swift in Sources */,
 				18A491B621EB6DE80091481C /* WebServices.swift in Sources */,
 				18A491AC21EB6B8E0091481C /* JWn.swift in Sources */,
 				27CAE1C021EDFF0D00662400 /* ViewDesVC.swift in Sources */,

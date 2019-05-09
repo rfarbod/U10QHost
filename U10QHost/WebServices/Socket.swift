@@ -21,10 +21,10 @@ class MySocket: NSObject {
         print(Constants.token)
         print(Constants.socket)
         var  paramsDic = [String:Any]()
-        if Constants.token == "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo=" {
+        if Constants.token == "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo_" {
             paramsDic = [
                 "tn":Constants.token,
-                "at":"imfromyou"
+                "at":"newHeaderTHIS_@2"
                 ]
         }else{
             paramsDic = ["tn":Constants.token
@@ -67,6 +67,9 @@ class MySocket: NSObject {
             }
             if (notification.data.type == "qz" && notification.data.event == "nu") {
                 EventsHelper.userNumber(number: notification.data.numberUser)
+            }
+            if (notification.data.type == "qz" && notification.data.event == "qn") {
+                EventsHelper.winnersList(winnersCount: notification.data.winnersCount, winner: notification.data.wn)
             }
             if (notification.data.type == "qn" && notification.data.event == "an") {
                 

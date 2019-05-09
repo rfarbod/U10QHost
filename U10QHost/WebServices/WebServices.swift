@@ -54,7 +54,7 @@ struct WebServices {
     
         print("URL: \(url)")
         print("params: \(params)")
-        let headers: [String: String] = ["t": Constants.token ?? "_","a":"imfromyou"]
+        let headers: [String: String] = ["t": Constants.token ?? "_","a":"newHeaderTHIS_@2"]
         print(headers)
 
         if files.count == 0 {

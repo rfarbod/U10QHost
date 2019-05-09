@@ -36,7 +36,7 @@ class DecisonVC: UIViewController {
     }
     @IBAction func pressedTest(_ sender: UIButton) {
         Constants.api = "http://tpi.uneed.ir:7700"
-        Constants.token = "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo="
+        Constants.token = "JIhPUMoxP++2+OgceFWrImSlKTL6mHlxjr0zoKJxhUo_"
         Constants.socket = "http://tpi.uneed.ir:7703/"
         Constants.media = "http://tpi.uneed.ir:7700/m/"
         MyURLs.media = "http://tpi.uneed.ir:7700/m/"
@@ -47,12 +47,12 @@ class DecisonVC: UIViewController {
         if tfToken.text?.isEmpty == true {
          Toast(text: "اجرا بدون توکن امکان پذیر نیست دلبندم").show()
         }else{
-            Constants.api = "http://tpi.u10q.com:7700"
+            Constants.api = "http://mapi.u10q.com"
             Constants.token = tfToken.text!
-//            Constants.socket = "http://tpi.u10q.com:7703/"
-            Constants.socket = "http://136.243.24.203:7703/"
-            Constants.media = "http://tpi.u10q.com:7700/m/"
-            MyURLs.media = "http://tpi.u10q.com:7700/m/"
+            Constants.socket = "http://tpi.u10q.com:7703/"
+//            Constants.socket = "http://136.243.24.203:7703/"
+            Constants.media = "http://mapi.u10q.com/m/"
+            MyURLs.media = "http://mapi.u10q.com/m/"
             self.performSegue(withIdentifier: "goToMain", sender: self)
         }
     

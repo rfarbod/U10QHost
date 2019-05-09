@@ -19,6 +19,7 @@ struct JNotData: ArrowParsable {
     var cm = JComment()
     var aw = String()
     var wn = [JWn]()
+    var winnersCount = Int()
     mutating func deserialize(_ json: JSON) {
         type             <-- json["tp"]
         event            <-- json["ev"]
@@ -29,6 +30,7 @@ struct JNotData: ArrowParsable {
         cm               <-- json["cm"]
         aw               <-- json["aw"]
         wn               <-- json["wn"]
+        winnersCount     <-- json["wnc"]
         
     }
     

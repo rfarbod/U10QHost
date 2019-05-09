@@ -11,7 +11,7 @@ import Alamofire
 func getAnswers(questionId:String,questionIndex:Int,completion:@escaping ((GetAnswerModel)->())) {
     let headers:[String:String] = [
         "t":Constants.token,
-        "a":"imfromyou"
+        "a":"newHeaderTHIS_@2"
     ]
     let params:[String:Any] = [
         "qi": questionId,

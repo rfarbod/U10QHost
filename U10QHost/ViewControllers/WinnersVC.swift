@@ -11,7 +11,7 @@ import Lottie
 class WinnersVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblWinnerCount: UILabel!
-    var allWinners = [WinnerModel]()
+    var allWinners = [JWn]()
     var quizId = String()
     lazy var logic = WinnersLC(self)
     override func viewDidLoad() {
@@ -33,10 +33,17 @@ class WinnersVC: UIViewController {
             }
         }
     }
-    func recievedWinners(winners:[WinnerModel],winnerCount:Int) {
-         allWinners = winners
-         tableView.reloadData()
-        lblWinnerCount.text = "تعداد برنده‌ها:\(String(describing:winnerCount))"
+    func setupObserver() {
+        EventsHelper.observeWinnersList(self, with: #selector(recievedWinners(notification:)))
+    }
+    @objc func recievedWinners(notification:Notification) {
+        if let winners = notification.userInfo!["wn"] as? [JWn] {
+            allWinners = winners
+            tableView.reloadData()
+        }
+        if let winnersCount = notification.userInfo!["wnc"] as? Int {
+            lblWinnerCount.text = "تعداد برنده‌ها:\(String(describing:winnersCount))"
+        }
         
     }
     @IBAction func dismissPressed(_ sender: UIButton) {
@@ -51,11 +58,6 @@ extension WinnersVC:UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "winnerCell", for: indexPath) as! WinnersCell
-        if self.allWinners[indexPath.row].avatar != nil {
-        cell.imgWinner.setMedia(hash: allWinners[indexPath.row].avatar!) { (success) in
-            print("success")
-        }
-        }
         cell.lblWinnerName.text = allWinners[indexPath.row].username
         cell.backgroundColor = UIColor.clear
         return cell
