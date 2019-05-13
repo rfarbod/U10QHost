@@ -9,6 +9,26 @@
 /* Begin PBXBuildFile section */
 		18331CB921EB9ED900FC5462 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331CB821EB9ED900FC5462 /* ChatCell.swift */; };
 		18331CBB21EBA64E00FC5462 /* KingfisherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18331CBA21EBA64E00FC5462 /* KingfisherExtension.swift */; };
+		1870F7C722896C210066E757 /* JWn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B222896C210066E757 /* JWn.swift */; };
+		1870F7C822896C210066E757 /* JRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B322896C210066E757 /* JRequest.swift */; };
+		1870F7C922896C210066E757 /* JNot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B422896C210066E757 /* JNot.swift */; };
+		1870F7CA22896C210066E757 /* JResSocketAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B522896C210066E757 /* JResSocketAuth.swift */; };
+		1870F7CB22896C210066E757 /* JResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B622896C210066E757 /* JResponse.swift */; };
+		1870F7CC22896C210066E757 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B722896C210066E757 /* QuestionModel.swift */; };
+		1870F7CD22896C210066E757 /* JQuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B822896C210066E757 /* JQuestionAnswer.swift */; };
+		1870F7CE22896C210066E757 /* JQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7B922896C210066E757 /* JQuestion.swift */; };
+		1870F7CF22896C210066E757 /* JUserComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7BA22896C210066E757 /* JUserComment.swift */; };
+		1870F7D022896C210066E757 /* JComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7BB22896C210066E757 /* JComment.swift */; };
+		1870F7D122896C210066E757 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7BD22896C210066E757 /* Question.swift */; };
+		1870F7D222896C210066E757 /* WinnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7BE22896C210066E757 /* WinnerModel.swift */; };
+		1870F7D322896C210066E757 /* GetAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7BF22896C210066E757 /* GetAnswerModel.swift */; };
+		1870F7D422896C210066E757 /* JNotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C022896C210066E757 /* JNotData.swift */; };
+		1870F7D522896C210066E757 /* JTrueAnswerCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C122896C210066E757 /* JTrueAnswerCount.swift */; };
+		1870F7D622896C210066E757 /* ResponseCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C222896C210066E757 /* ResponseCodes.swift */; };
+		1870F7D722896C210066E757 /* QuizInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C322896C210066E757 /* QuizInfoModel.swift */; };
+		1870F7D822896C210066E757 /* MFileToSend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C422896C210066E757 /* MFileToSend.swift */; };
+		1870F7D922896C210066E757 /* ViewAnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C522896C210066E757 /* ViewAnswerModel.swift */; };
+		1870F7DA22896C210066E757 /* AnswerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1870F7C622896C210066E757 /* AnswerModel.swift */; };
 		18A4919621EB300D0091481C /* GetQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4919521EB300D0091481C /* GetQuestions.swift */; };
 		18A4919821EB4C750091481C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4919721EB4C750091481C /* Colors.swift */; };
 		18A4919A21EB58D20091481C /* GetAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A4919921EB58D20091481C /* GetAnswers.swift */; };
@@ -78,6 +98,26 @@
 /* Begin PBXFileReference section */
 		18331CB821EB9ED900FC5462 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
 		18331CBA21EBA64E00FC5462 /* KingfisherExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KingfisherExtension.swift; sourceTree = "<group>"; };
+		1870F7B222896C210066E757 /* JWn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JWn.swift; sourceTree = "<group>"; };
+		1870F7B322896C210066E757 /* JRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRequest.swift; sourceTree = "<group>"; };
+		1870F7B422896C210066E757 /* JNot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JNot.swift; sourceTree = "<group>"; };
+		1870F7B522896C210066E757 /* JResSocketAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JResSocketAuth.swift; sourceTree = "<group>"; };
+		1870F7B622896C210066E757 /* JResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JResponse.swift; sourceTree = "<group>"; };
+		1870F7B722896C210066E757 /* QuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		1870F7B822896C210066E757 /* JQuestionAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQuestionAnswer.swift; sourceTree = "<group>"; };
+		1870F7B922896C210066E757 /* JQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JQuestion.swift; sourceTree = "<group>"; };
+		1870F7BA22896C210066E757 /* JUserComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JUserComment.swift; sourceTree = "<group>"; };
+		1870F7BB22896C210066E757 /* JComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JComment.swift; sourceTree = "<group>"; };
+		1870F7BD22896C210066E757 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		1870F7BE22896C210066E757 /* WinnerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerModel.swift; sourceTree = "<group>"; };
+		1870F7BF22896C210066E757 /* GetAnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetAnswerModel.swift; sourceTree = "<group>"; };
+		1870F7C022896C210066E757 /* JNotData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JNotData.swift; sourceTree = "<group>"; };
+		1870F7C122896C210066E757 /* JTrueAnswerCount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JTrueAnswerCount.swift; sourceTree = "<group>"; };
+		1870F7C222896C210066E757 /* ResponseCodes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCodes.swift; sourceTree = "<group>"; };
+		1870F7C322896C210066E757 /* QuizInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizInfoModel.swift; sourceTree = "<group>"; };
+		1870F7C422896C210066E757 /* MFileToSend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MFileToSend.swift; sourceTree = "<group>"; };
+		1870F7C522896C210066E757 /* ViewAnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewAnswerModel.swift; sourceTree = "<group>"; };
+		1870F7C622896C210066E757 /* AnswerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerModel.swift; sourceTree = "<group>"; };
 		18A4919521EB300D0091481C /* GetQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetQuestions.swift; sourceTree = "<group>"; };
 		18A4919721EB4C750091481C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		18A4919921EB58D20091481C /* GetAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAnswers.swift; sourceTree = "<group>"; };
@@ -171,6 +211,41 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		1870F7B122896C210066E757 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1870F7B222896C210066E757 /* JWn.swift */,
+				1870F7B322896C210066E757 /* JRequest.swift */,
+				1870F7B422896C210066E757 /* JNot.swift */,
+				1870F7B522896C210066E757 /* JResSocketAuth.swift */,
+				1870F7B622896C210066E757 /* JResponse.swift */,
+				1870F7B722896C210066E757 /* QuestionModel.swift */,
+				1870F7B822896C210066E757 /* JQuestionAnswer.swift */,
+				1870F7B922896C210066E757 /* JQuestion.swift */,
+				1870F7BA22896C210066E757 /* JUserComment.swift */,
+				1870F7BB22896C210066E757 /* JComment.swift */,
+				1870F7BC22896C210066E757 /* DBModels */,
+				1870F7BE22896C210066E757 /* WinnerModel.swift */,
+				1870F7BF22896C210066E757 /* GetAnswerModel.swift */,
+				1870F7C022896C210066E757 /* JNotData.swift */,
+				1870F7C122896C210066E757 /* JTrueAnswerCount.swift */,
+				1870F7C222896C210066E757 /* ResponseCodes.swift */,
+				1870F7C322896C210066E757 /* QuizInfoModel.swift */,
+				1870F7C422896C210066E757 /* MFileToSend.swift */,
+				1870F7C522896C210066E757 /* ViewAnswerModel.swift */,
+				1870F7C622896C210066E757 /* AnswerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1870F7BC22896C210066E757 /* DBModels */ = {
+			isa = PBXGroup;
+			children = (
+				1870F7BD22896C210066E757 /* Question.swift */,
+			);
+			path = DBModels;
+			sourceTree = "<group>";
+		};
 		18D59E2021EA950D00A5AFE3 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +267,7 @@
 		18D59E2B21EA950D00A5AFE3 /* U10QHost */ = {
 			isa = PBXGroup;
 			children = (
+				1870F7B122896C210066E757 /* Model */,
 				18331CB721EB9EAE00FC5462 /* Cells */,
 				18D59E6021EB209800A5AFE3 /* WebServices */,
 				18D59E5621EB1DCA00A5AFE3 /* Model */,
@@ -504,7 +580,13 @@
 				18A4919821EB4C750091481C /* Colors.swift in Sources */,
 				27404E9921EE4EB200D71F3B /* WinnersCell.swift in Sources */,
 				18D59E5821EB1DD900A5AFE3 /* AnswerModel.swift in Sources */,
+				1870F7CE22896C210066E757 /* JQuestion.swift in Sources */,
+				1870F7CB22896C210066E757 /* JResponse.swift in Sources */,
+				1870F7D822896C210066E757 /* MFileToSend.swift in Sources */,
+				1870F7D022896C210066E757 /* JComment.swift in Sources */,
+				1870F7D522896C210066E757 /* JTrueAnswerCount.swift in Sources */,
 				18A491C421EB6F010091481C /* MFileToSend.swift in Sources */,
+				1870F7D622896C210066E757 /* ResponseCodes.swift in Sources */,
 				18D59E4021EA963B00A5AFE3 /* MainLC.swift in Sources */,
 				27404E9521EE4C8E00D71F3B /* WinnersVC.swift in Sources */,
 				27B38B0121F486030015698C /* StartQuiz.swift in Sources */,
@@ -515,13 +597,19 @@
 				18A491BA21EB6E5F0091481C /* JNotData.swift in Sources */,
 				27FD763A21ECBB5E00142989 /* Question.swift in Sources */,
 				27FD763C21ECBD5000142989 /* SubmitDesVC.swift in Sources */,
+				1870F7C722896C210066E757 /* JWn.swift in Sources */,
 				27B38AFF21F46D6A0015698C /* DecisonVC.swift in Sources */,
 				27D505D821F333930084D59B /* SilentUser.swift in Sources */,
 				18331CB921EB9ED900FC5462 /* ChatCell.swift in Sources */,
+				1870F7D422896C210066E757 /* JNotData.swift in Sources */,
 				18D59E2D21EA950D00A5AFE3 /* AppDelegate.swift in Sources */,
+				1870F7CA22896C210066E757 /* JResSocketAuth.swift in Sources */,
+				1870F7D922896C210066E757 /* ViewAnswerModel.swift in Sources */,
+				1870F7C822896C210066E757 /* JRequest.swift in Sources */,
 				27404E9321EE499B00D71F3B /* GetWinners.swift in Sources */,
 				27404E9721EE4D2300D71F3B /* WinnersLC.swift in Sources */,
 				18A491C221EB6EE90091481C /* JQuestionAnswer.swift in Sources */,
+				1870F7D722896C210066E757 /* QuizInfoModel.swift in Sources */,
 				18A491C621EB70FF0091481C /* StringExtensions.swift in Sources */,
 				18A491C021EB6EAC0091481C /* JTrueAnswerCount.swift in Sources */,
 				27FE55172259E488004CEDE9 /* InfoVC.swift in Sources */,
@@ -531,18 +619,24 @@
 				27FD763521ECA61200142989 /* NextQuizModel.swift in Sources */,
 				18A491AA21EB6B810091481C /* JUserComment.swift in Sources */,
 				27FD763321ECA55300142989 /* DesPopOverVC.swift in Sources */,
+				1870F7D322896C210066E757 /* GetAnswerModel.swift in Sources */,
 				27FD763121EC9AF600142989 /* JResSocketAuth.swift in Sources */,
 				27FE551B2259EA03004CEDE9 /* QuizInfoModel.swift in Sources */,
 				27404E8D21EE32E500D71F3B /* EndQuiz.swift in Sources */,
 				18A491A221EB682F0091481C /* Socket.swift in Sources */,
+				1870F7CC22896C210066E757 /* QuestionModel.swift in Sources */,
 				27FD762F21EC9ADD00142989 /* JResponse.swift in Sources */,
+				1870F7C922896C210066E757 /* JNot.swift in Sources */,
 				18D59E5F21EB1FB300A5AFE3 /* MyURLs.swift in Sources */,
 				27404E9121EE488A00D71F3B /* WinnerModel.swift in Sources */,
 				2746C58F21EE1743002BC21F /* AskQuestion.swift in Sources */,
 				27FE55192259E552004CEDE9 /* InfoCell.swift in Sources */,
+				1870F7DA22896C210066E757 /* AnswerModel.swift in Sources */,
 				18A491B621EB6DE80091481C /* WebServices.swift in Sources */,
 				18A491AC21EB6B8E0091481C /* JWn.swift in Sources */,
+				1870F7D222896C210066E757 /* WinnerModel.swift in Sources */,
 				27CAE1C021EDFF0D00662400 /* ViewDesVC.swift in Sources */,
+				1870F7CF22896C210066E757 /* JUserComment.swift in Sources */,
 				27404E8F21EE350900D71F3B /* showWinners.swift in Sources */,
 				18A4919621EB300D0091481C /* GetQuestions.swift in Sources */,
 				18D59E5D21EB1F7400A5AFE3 /* Constants.swift in Sources */,
@@ -550,6 +644,8 @@
 				18A491C821EB9A880091481C /* JoinQuiz.swift in Sources */,
 				18A4919E21EB59250091481C /* GetAnswerModel.swift in Sources */,
 				18A491B221EB6BD80091481C /* ResponseCodes.swift in Sources */,
+				1870F7CD22896C210066E757 /* JQuestionAnswer.swift in Sources */,
+				1870F7D122896C210066E757 /* Question.swift in Sources */,
 				2746C59121EE224A002BC21F /* ShowAnswer.swift in Sources */,
 				27FD763721ECA84400142989 /* QuestionCell.swift in Sources */,
 				18A491BE21EB6E970091481C /* JComment.swift in Sources */,
